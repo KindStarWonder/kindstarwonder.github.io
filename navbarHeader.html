@@ -1,0 +1,47 @@
+<div class="sidebar">
+    <ul class="menu">
+        <li onclick="toggleSubmenu('about')">About Me
+            <ul class="submenu" id="about">
+                <li><a href="docs/about-me.html">Introduction</a></li>
+            </ul>
+        </li>
+        <li onclick="toggleSubmenu('webhosting')">Web Hosting Stack Overview
+            <ul class="submenu" id="webhosting">
+                <li><a href="docs/web-hosting-stack-overview.html">Overview</a></li>
+            </ul>
+        </li>
+        <li onclick="toggleSubmenu('cloud')">Cloud Integration
+            <ul class="submenu" id="cloud">
+                <li><a href="docs/azure.html">Azure</a></li>
+                <li><a href="docs/aws.html">AWS</a></li>
+                <li><a href="docs/google.html">Google</a></li>
+            </ul>
+        </li>
+        <li onclick="toggleSubmenu('blueteam')">Blue Team - Management and Policy
+            <ul class="submenu" id="blueteam">
+                <li><a href="docs/blue-team.html">Overview</a></li>
+            </ul>
+        </li>
+        <li onclick="toggleSubmenu('redteam')">Red Team - Actual Hacking and Penetration
+            <ul class="submenu" id="redteam">
+                <li><a href="docs/red-team.html">Overview</a></li>
+            </ul>
+        </li>
+        <li onclick="toggleSubmenu('backend')">Backend - Database Data Hosting
+            <ul class="submenu" id="backend">
+                <li><a href="docs/backend.html">Overview</a></li>
+            </ul>
+        </li>
+        <li onclick="toggleSubmenu('wiki')">GL Wiki Steps
+            <ul class="submenu" id="wiki">
+                <li><a href="docs/wiki-step1.html">Step 1</a></li>
+                <li><a href="docs/wiki-step2.html">Step 2</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<script>
+    function toggleSubmenu(id) {
+        document.getElementById(id).classList.toggle('active');
+    }
+</script>
