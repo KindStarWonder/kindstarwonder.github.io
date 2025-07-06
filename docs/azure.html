@@ -7,7 +7,50 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+    <div class="sidebar">
+        <ul class="menu">
+            <li onclick="toggleSubmenu('about')">About Me
+                <ul class="submenu" id="about">
+                    <li><a href="about-me.html">Introduction</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('webhosting')">Web Hosting Stack Overview
+                <ul class="submenu" id="webhosting">
+                    <li><a href="web-hosting-stack-overview.html">Overview</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('cloud')">Cloud Integration
+                <ul class="submenu" id="cloud">
+                    <li><a href="azure.html">Azure</a></li>
+                    <li><a href="aws.html">AWS</a></li>
+                    <li><a href="google.html">Google</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('blueteam')">Blue Team - Management and Policy
+                <ul class="submenu" id="blueteam">
+                    <li><a href="blue-team.html">Overview</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('redteam')">Red Team - Actual Hacking and Penetration
+                <ul class="submenu" id="redteam">
+                    <li><a href="red-team.html">Overview</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('backend')">Backend - Database Data Hosting
+                <ul class="submenu" id="backend">
+                    <li><a href="backend.html">Overview</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
     <h1>Azure Integration</h1>
     <p>Details of Azure projects from GL Solutions or other experience.</p>
+    </div>
+    <script>
+        function toggleSubmenu(id) {
+            document.getElementById(id).classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
