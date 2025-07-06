@@ -5,21 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kindstarwonder's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body { display: flex; }
-        .sidebar { width: 250px; background: #2c3e50; color: white; height: 100vh; }
-        .menu { list-style: none; padding: 0; margin: 0; }
-        .menu li { padding: 15px; cursor: pointer; border-bottom: 1px solid #34495e; }
-        .menu li:hover { background: #34495e; }
-        .submenu { display: none; padding-left: 20px; }
-        .submenu.active { display: block; }
-        .submenu li { padding: 10px; font-size: 0.9em; }
-        .submenu li a { color: #3498db; text-decoration: none; }
-        .content { flex: 1; padding: 20px; }
-    </style>
 </head>
 <body>
-   <div class="sidebar">
+    <div class="sidebar">
         <ul class="menu">
             <li onclick="toggleSubmenu('about')">About Me
                 <ul class="submenu" id="about">
@@ -53,6 +41,12 @@
                     <li><a href="docs/backend.html">Overview</a></li>
                 </ul>
             </li>
+            <li onclick="toggleSubmenu('wiki')">GL Wiki Steps
+                <ul class="submenu" id="wiki">
+                    <li><a href="docs/wiki-step1.html">Step 1</a></li>
+                    <li><a href="docs/wiki-step2.html">Step 2</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
     <div class="content">
@@ -64,11 +58,5 @@
             document.getElementById(id).classList.toggle('active');
         }
     </script>
-    <li onclick="toggleSubmenu('wiki')">GL Wiki Steps
-    <ul class="submenu" id="wiki">
-        <li><a href="docs/wiki-step1.md">Step 1</a></li>
-        <li><a href="docs/wiki-step2.md">Step 2</a></li>
-    </ul>
-</li>
 </body>
 </html>
