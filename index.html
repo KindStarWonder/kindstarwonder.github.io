@@ -1,125 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Under Construction</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 20vh; background: #f5f5f5; }
-    h1 { color: #444; }
-    p { color: #888; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-family: Arial, sans-serif;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #f2f2f2;
-            font-weight: bold;
-        }
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        tr:hover {
-            background-color: #f5f5f5;
-        }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kindstarwonder's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { display: flex; }
+        .sidebar { width: 250px; background: #2c3e50; color: white; height: 100vh; }
+        .menu { list-style: none; padding: 0; margin: 0; }
+        .menu li { padding: 15px; cursor: pointer; border-bottom: 1px solid #34495e; }
+        .menu li:hover { background: #34495e; }
+        .submenu { display: none; padding-left: 20px; }
+        .submenu.active { display: block; }
+        .submenu li { padding: 10px; font-size: 0.9em; }
+        .submenu li a { color: #3498db; text-decoration: none; }
+        .content { flex: 1; padding: 20px; }
+    </style>
 </head>
 <body>
-  <h1>Under Construction</h1>
-  <p>Just Started A Few Days Ago, migrating homework, hobby, and projects to here.</p>
-  <p>Will make guides for fullstack development on multiple major stacks, including configuration and systems administration tasks.</p>
-<table>
-        <thead>
-            <tr>
-                <th>Stack</th>
-                <th>OS</th>
-                <th>Web Server</th>
-                <th>Database</th>
-                <th>Framework/Language</th>
-                <th>Best For</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>WISA</td>
-                <td>Windows</td>
-                <td>IIS</td>
-                <td>SQL Server</td>
-                <td>ASP.NET (C#)</td>
-                <td>Enterprise .NET apps</td>
-            </tr>
-            <tr>
-                <td>MEAN</td>
-                <td>Any (Linux)</td>
-                <td>Node.js</td>
-                <td>MongoDB</td>
-                <td>Express.js, Angular</td>
-                <td>JavaScript SPAs</td>
-            </tr>
-            <tr>
-                <td>MERN</td>
-                <td>Any (Linux)</td>
-                <td>Node.js</td>
-                <td>MongoDB</td>
-                <td>Express.js, React</td>
-                <td>Modern web apps with React</td>
-            </tr>
-            <tr>
-                <td>MEVN</td>
-                <td>Any (Linux)</td>
-                <td>Node.js</td>
-                <td>MongoDB</td>
-                <td>Express.js, Vue.js</td>
-                <td>Lightweight Vue.js apps</td>
-            </tr>
-            <tr>
-                <td>Django</td>
-                <td>Any (Linux)</td>
-                <td>Nginx/Apache</td>
-                <td>PostgreSQL</td>
-                <td>Django (Python)</td>
-                <td>Secure, rapid Python apps</td>
-            </tr>
-            <tr>
-                <td>Rails</td>
-                <td>Any (Linux)</td>
-                <td>Nginx/Apache</td>
-                <td>PostgreSQL/MySQL</td>
-                <td>Ruby on Rails</td>
-                <td>Startup-friendly Ruby apps</td>
-            </tr>
-            <tr>
-                <td>LAMP</td>
-                <td>Linux</td>
-                <td>Apache</td>
-                <td>MySQL</td>
-                <td>PHP/Perl/Python</td>
-                <td>General-purpose web apps</td>
-            </tr>
-            <tr>
-                <td>LEMP</td>
-                <td>Linux</td>
-                <td>Nginx</td>
-                <td>MySQL</td>
-                <td>PHP/Perl/Python</td>
-                <td>High-performance web apps</td>
-            </tr>
-            <tr>
-                <td>WAMP</td>
-                <td>Windows</td>
-                <td>Apache</td>
-                <td>MySQL</td>
-                <td>PHP/Perl/Python</td>
-                <td>Windows-based development</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="sidebar">
+        <ul class="menu">
+            <li onclick="toggleSubmenu('about')">About Me
+                <ul class="submenu" id="about">
+                    <li><a href="docs/about-me.html">Introduction</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('webhosting')">Web Hosting Stack Overview
+                <ul class="submenu" id="webhosting">
+                    <li><a href="docs/web-hosting-stack-overview.html">Overview</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('cloud')">Cloud Integration
+                <ul class="submenu" id="cloud">
+                    <li><a href="docs/azure.html">Azure</a></li>
+                    <li><a href="docs/aws.html">AWS</a></li>
+                    <li><a href="docs/google.html">Google</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('blueteam')">Blue Team - Management and Policy
+                <ul class="submenu" id="blueteam">
+                    <li><a href="docs/blue-team.html">Overview</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('redteam')">Red Team - Actual Hacking and Penetration
+                <ul class="submenu" id="redteam">
+                    <li><a href="docs/red-team.html">Overview</a></li>
+                </ul>
+            </li>
+            <li onclick="toggleSubmenu('backend')">Backend - Database Data Hosting
+                <ul class="submenu" id="backend">
+                    <li><a href="docs/backend.html">Overview</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h1>Welcome to kindstarwonder's Portfolio</h1>
+        <p>Explore my expertise in web hosting, cloud integration, cybersecurity, and backend development.</p>
+    </div>
+    <script>
+        function toggleSubmenu(id) {
+            document.getElementById(id).classList.toggle('active');
+        }
+    </script>
+    <li onclick="toggleSubmenu('wiki')">GL Wiki Steps
+    <ul class="submenu" id="wiki">
+        <li><a href="docs/wiki-step1.md">Step 1</a></li>
+        <li><a href="docs/wiki-step2.md">Step 2</a></li>
+    </ul>
+</li>
 </body>
 </html>
